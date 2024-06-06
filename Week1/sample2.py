@@ -1,0 +1,8 @@
+print("hello world")
+print("programming is fun", end=" ")
+print(" ", end="\n")
+print("abc", end="\n")
+print("Brian Stolarski, 28, Student", end="\n")
+print("Brian Stolarski")
+print("28")
+print("Student")

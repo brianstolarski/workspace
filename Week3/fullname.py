@@ -4,5 +4,3 @@ lastname = input("Enter your last name: ")
 print("Your last name is:", lastname)
 fullname = firstname + " " + lastname
 print("My Full name is: ", fullname)
-
-

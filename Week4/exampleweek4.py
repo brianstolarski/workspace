@@ -47,7 +47,7 @@ print(ssn)
 ######################################################
 
 entry = "12345"
-isint = entry.isdigit() #returns a value of true or false is the string called entry contains only digits in this case it would be true and stores it in isint
+isint = entry.isdigit() #returns a value of true or false if the string called entry contains only digits in this case it would be true and stores it in isint
 print("Is", entry, "a digit?:",isint)
 
 ######################################################
@@ -101,7 +101,7 @@ print("{} will teach {} in term {}".format(instructor, subject, term)) #format w
 
 ######################################################
 
-######!!!!!NEGATIVE MEANS AFTER THE WORD OR ITEM, POSITIVE MEANS BEFORE THE WORD OR ITEM!!!!!#####
+######!!!!!NEGATIVE MEANS AFTER THE WORD OR ITEM, POSITIVE MEANS BEFORE THE WORD OR ITM!!!!!#####
 
 firstname = "Raed"
 lastname = "Karim"
@@ -121,9 +121,10 @@ print("%-4d%10d" %(2, 9000))
 print("%-4d%10d" %(3, 90000))
 print("%-4d%10d" %(4, 9000000))
 
-print("%-15s%-15d%s%-15.2f"%("Sales1", 8, "$", 1200.0))
+print("%-15s%s-15d%s%-15.2f"%("Sales1", 8, "$", 1200.0))
 print("%-15s%-15d%s%-15.2f"%("Sales2", 11, "$", 1345.8))
 print("%-15s%-15d%s%-15.2f"%("Sales3", 9, "$", 1778.8))
+
 
 x = 123.45678
 print("1234567890")
@@ -142,5 +143,48 @@ print ((age >=65 and status == "retired") or age < 18) #paranthesis is used to c
 
 grade = 84
 passed = (grade >= 50)
-#passed = "Congrats! You passed" # youcan also assign the value of true a new string
+#passed = "Congrats! You passed" # youcan also assign the value of true a new string so it says something other than true
 print("Passed: ", passed)
+
+######################################################
+
+firstname = "brian"
+print(firstname.upper()) #converts brian to all uppercase
+title = "PROFESSOR"
+print(title.lower()) # converts PROFESSOR to all lowercase
+title = title.lower()
+print("My title is:", title)
+
+lastname = "Stolarski"
+print(lastname.lower() == "stolarski") #returns the value of false or true
+middlename = "Lucas"
+middlename = middlename.lower() #converts Lucas to all lowercase
+print("My name is:", middlename, lastname)
+
+
+
+# score = 50
+# if score >50:
+# print("you passed the course")
+# else:
+# print("sorry you failed this course")
+
+x = float(input("enter a number:"))
+y = float(input("enter a number:"))
+z = (x+y)/2
+print("average of the two:", z)
+print(type(z))
+
+
+a ="00739"
+if(a.isdigit()):
+        a=int(a)
+        num=2.0
+        a /= num
+        print(a)
+print(type(a))
+
+
+s = "brian stolarski"
+slice = s[7:13]
+print(slice)

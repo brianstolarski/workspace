@@ -8,3 +8,6 @@ print(type(number))
 number = int(input("enter another number: "))
 print("lets add 1 to that number: ", number + 1)
 print(type(number))
+
+
+

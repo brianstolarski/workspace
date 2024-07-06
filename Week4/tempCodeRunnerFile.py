@@ -1,3 +1,3 @@
-age = 65; status = "retired"
-print (age >=65 or age <=18 or status == "retired")
-print ((age >=65 and status == "retired") or age < 18)
+s = "brian stolarski"
+slice = s[7:13]
+print(slice)

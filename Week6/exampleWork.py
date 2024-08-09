@@ -2,17 +2,17 @@
 #Create and empty list, then append the entered information into the list using append() one at a time.
 #Last, print the list
 
-studentInfo = input("Please enter your first name, last name, and student ID with spaced in between: ")
-print("Your information: ", studentInfo)
+# studentInfo = input("Please enter your first name, last name, and student ID with spaced in between: ")
+# print("Your information: ", studentInfo)
 
-studentInfoSplit = studentInfo.split() #Takes all 3 inputs and seperates them, default is spaces between the strings
+# studentInfoSplit = studentInfo.split() #Takes all 3 inputs and seperates them, default is spaces between the strings
 
-studentInfoList = [] #Creates am empty list
+# studentInfoList = [] #Creates am empty list
 
-for studentInfo in studentInfoSplit: 
-    studentInfoList.append(studentInfo)
+# for studentInfo in studentInfoSplit: 
+#     studentInfoList.append(studentInfo)
 
-print("Information split: ", studentInfoList)
+# print("Information split: ", studentInfoList)
 
 ####################################################################################
 #Ask the user to enter 4 sales amounts as float values, all in one input statement seperated with (,)
@@ -22,26 +22,26 @@ print("Information split: ", studentInfoList)
 #Last, count the number of times an amount occurs in a list
 #Print out all outputs in the above questions
 
-salesAmount = input("Enter 4 sales amounts as floats and seperate each value with a comma: ")
-salesAmountList = [float(salesAmount) for salesAmount in salesAmount.split(',')]
-print("Initial list: ", salesAmountList)
+# salesAmount = input("Enter 4 sales amounts as floats and seperate each value with a comma: ")
+# salesAmountList = [float(salesAmount) for salesAmount in salesAmount.split(',')]
+# print("Initial list: ", salesAmountList)
 
-minSales = min(salesAmountList)
-maxSales = max(salesAmountList)
-sumSales = sum(salesAmountList)
+# minSales = min(salesAmountList)
+# maxSales = max(salesAmountList)
+# sumSales = sum(salesAmountList)
 
-sortedSales = sorted(salesAmountList)
-reversedSales = sortedSales[::-1]
-countedList = sortedSales.count(44.4)
+# sortedSales = sorted(salesAmountList)
+# reversedSales = sortedSales[::-1]
+# countedList = sortedSales.count(44.4)
 
 
-print("Sale list: ", salesAmountList)
-print("Min sales: ", minSales)
-print("Max sales: ", maxSales)
-print("Sum of sales: ", sumSales)
-print("Sorted sales: ", sortedSales)
-print("Reverse sales: ", reversedSales)
-print("44.4 appears this many time in the list: ", countedList)
+# print("Sale list: ", salesAmountList)
+# print("Min sales: ", minSales)
+# print("Max sales: ", maxSales)
+# print("Sum of sales: ", sumSales)
+# print("Sorted sales: ", sortedSales)
+# print("Reverse sales: ", reversedSales)
+# print("44.4 appears this many time in the list: ", countedList)
 
 ####################################################################################
 # Create a list of 3 subjects you take in your school
@@ -54,26 +54,50 @@ print("44.4 appears this many time in the list: ", countedList)
 # in last weeks lesson.
 
 schoolSubjects = ["math", "python", "english"] # list of 3 subject
-subjectGrades = [91, 81, 71] # 3 grades for the subject
+subjectGrades = [81, 76, 63] # 3 grades for the subject
 
 subjectInput = input("Enter the name of the subject: ")
 
 if subjectInput == "math": 
     schoolSubjects.remove("math") 
-    subjectGrades.remove(91)
+    subjectGrades.remove(81)
 elif subjectInput == "python":
     schoolSubjects.remove("python")
-    subjectGrades.remove(81)
+    subjectGrades.remove(76)
 elif subjectInput == "english":
     schoolSubjects.remove("english")
-    subjectGrades.remove(71)
+    subjectGrades.remove(63)
 else:
-    gradeInput = input("Enter the grade of that subject: ")
+    gradeInput = int(input("Enter the grade of that subject: "))
     schoolSubjects.append(subjectInput)
     subjectGrades.append(gradeInput)
 
+averageGrade = sum(subjectGrades) / len(subjectGrades) #divides it by the length of the list after items are appended
 schoolSubjects.extend(subjectGrades) # extending school subjects with subjectGrades 
 print(schoolSubjects)
+print("The Average of the 4 grades is:", f"{averageGrade:.2f}")
+
+letterGrade = averageGrade
+if averageGrade >= 90:
+    letterGrade = "A"
+    print("Your letter grade is A")
+elif averageGrade >= 70:
+    letterGrade = "B"
+    print("Your letter grade is B")
+elif averageGrade >= 60:
+    letterGrade = "C"
+    print("Your letter grade is C")
+elif averageGrade >= 50:
+    print("Your letter grade is D")
+    letterGrade = "D"
+else:
+    print("Your average grade was an F")
+    letterGrade = "F"
+
+exit()
+
+
+
 
 
 ####################################################################################

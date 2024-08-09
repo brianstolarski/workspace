@@ -1,6 +1,3 @@
-
-
-
 stats = [48.1, 22, 23.0, 100.0, 94.2]
 print(stats)
 stats.append(99.99) #append adds 99.99 to the END of the list
